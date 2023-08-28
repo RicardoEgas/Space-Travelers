@@ -14,7 +14,7 @@ function Header() {
         <ul>
           {links.map((link) => (
             <li key={link.text}>
-              <a href="/">Temp link</a>
+              <a href="/">Replace with Navlink</a>
             </li>
           ))}
         </ul>
