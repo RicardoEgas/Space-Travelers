@@ -3,7 +3,6 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Missions from './components/Missions';
 import NotMatch from './components/NotMatch';
-import './App.css';
 
 function App() {
   return (
