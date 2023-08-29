@@ -4,11 +4,11 @@ import rocketsReducer from './rockets/rocketsSlice';
 
 const rootReducer = combineReducers({
   mission: missionReducer,
+  rockets: rocketsReducer,
 });
 
 const store = configureStore({
   reducer: rootReducer,
-  rockets: rocketsReducer,
 });
 
 export default store;
