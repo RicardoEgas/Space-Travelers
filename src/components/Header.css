@@ -46,10 +46,18 @@ header h1 {
   }
 
   header h1 {
-    padding: 10px 0 10px 100px;
+    padding: 10px 0 10px 150px;
     font-size: 30px;
     font-weight: 400;
     color: #000;
     background: url(planet1.png) top left/contain no-repeat;
+  }
+
+  .navbar ul {
+    padding: 0;
+  }
+
+  .navbar a {
+    padding: 10px;
   }
 }
