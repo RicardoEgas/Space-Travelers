@@ -1,10 +1,5 @@
 import './Header.css';
-
-const links = [
-  { path: '/', text: 'Rockets' },
-  { path: 'missions', text: 'Missions' },
-  { path: 'profile', text: 'My Profile' },
-];
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
@@ -12,11 +7,40 @@ function Header() {
       <h1>Space Travelers&apos; Hub</h1>
       <nav className="navbar">
         <ul>
-          {links.map((link) => (
-            <li key={link.text}>
-              <a href="/">Temp link</a>
-            </li>
-          ))}
+
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active link' : 'pending link')}
+            >
+              Rockets
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="missions"
+              className="link"
+            >
+              Missions
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="dragons"
+              className="link"
+            >
+              Dragons
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="profile"
+              className="link"
+            >
+              My profile
+            </NavLink>
+          </li>
+
         </ul>
       </nav>
     </header>
