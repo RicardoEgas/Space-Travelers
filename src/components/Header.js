@@ -1,9 +1,10 @@
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const links = [
   { path: '/', text: 'Rockets' },
   { path: 'missions', text: 'Missions' },
+  { path: 'dragons', text: 'Dragons' },
   { path: 'profile', text: 'My Profile' },
 ];
 
@@ -15,7 +16,7 @@ function Header() {
         <ul>
           {links.map((link) => (
             <li key={link.text}>
-              <a href="/">Replace with Navlink</a>
+              <NavLink to={link.path}>{link.text}</NavLink>
             </li>
           ))}
         </ul>

@@ -1,11 +1,19 @@
-import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import Missions from './components/Missions';
+import NotMatch from './components/NotMatch';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="missions" element={<Missions />} />
+        <Route path="*" element={<NotMatch />} />
+      </Route>
+    </Routes>
   );
 }
 
