@@ -13,8 +13,6 @@ export const fetchDragonsAsync = createAsyncThunk(
   'dragons/fetchDragons',
   async () => {
     const response = await axios.get(`${baseDragonsURL}`);
-    console.log('status is:', response);
-    console.log('fetched data is:', response.data);
     return response.data;
   },
 );
@@ -26,20 +24,20 @@ const dragonsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchDragonsAsync.fulfilled, (state, action) => {
-        if (action.payload !== '') {
-          const dragons = [];
-          const keys = Object.keys(action.payload);
-          keys.forEach((keyOfActionPayload) => {
-            dragons.push({
-              id: keyOfActionPayload,
-              ...action.payload[keyOfActionPayload][0],
-            });
+        const newDragons = [];
+        const keys = Object.keys(action.payload);
+        keys.forEach((keyOfActionPayload) => {
+          newDragons.push({
+            id: keyOfActionPayload,
+            ...action.payload[keyOfActionPayload],
           });
-          state.dragons = dragons;
-          if (state.dragons.length === 0) state.error = 'No data was found';
-        } else {
-          state.error = 'No result';
-        }
+        });
+        state.dragons = newDragons;
+        state.error = ''; 
+      })
+      .addCase(fetchDragonsAsync.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message; 
       });
   },
 });
