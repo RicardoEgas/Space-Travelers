@@ -1,0 +1,16 @@
+.rockets-container {
+  display: flex;
+}
+
+.rockets-pictures {
+  width: 20rem;
+  height: 15rem;
+  margin: 1rem;
+}
+
+.reserve-rocket {
+  background-color: rgb(70, 120, 238);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+}
