@@ -33,11 +33,11 @@ const dragonsSlice = createSlice({
           });
         });
         state.dragons = newDragons;
-        state.error = ''; 
+        state.error = '';
       })
       .addCase(fetchDragonsAsync.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.error.message; 
+        state.error = action.error.message;
       });
   },
 });
