@@ -16,6 +16,8 @@ const RocketInfo = ({
     }
   };
 
+  const buttonClass = reserved ? 'reserved-button' : 'reserve-rocket';
+
   return (
     <div className="rockets-container">
       <div>
@@ -24,12 +26,12 @@ const RocketInfo = ({
       <div className="rockets-info">
         <h2>{name}</h2>
         <p>
-          {reserved ? <span>Reserved</span> : null}
+          {reserved ? <span className="reserved-tag">Reserved</span> : null}
           {description}
         </p>
         <button
           type="button"
-          className="reserve-rocket"
+          className={buttonClass}
           onClick={toggleReservedStatus}
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
