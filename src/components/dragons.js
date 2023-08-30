@@ -9,7 +9,7 @@ const Dragons = () => {
 
   useEffect(() => {
     dispatch(fetchDragonsAsync());
-  }, []);
+  });
 
   return (
     <section className="dragon">
