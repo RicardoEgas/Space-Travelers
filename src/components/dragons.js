@@ -25,7 +25,7 @@ const Dragons = () => {
               height: '300px', backgroundImage: `url(${dragon.flickr_images[1]})`, backgroundSize: 'cover',
             }}
           >
-            <button type="button">Booking now</button>
+            <button type="button">Reserve dragon</button>
           </div>
           <div className="images">
             {dragon.flickr_images.map((pic) => (<img key={pic} alt="" src={pic} />))}
