@@ -19,7 +19,14 @@ const Dragons = () => {
             <h2>{dragon.name}</h2>
             <em>{dragon.type}</em>
           </div>
-          <img src={dragon.flickr_images[1]} alt="" />
+          <div
+            className="mainImg"
+            style={{
+              height: '300px', backgroundImage: `url(${dragon.flickr_images[1]})`, backgroundSize: 'cover',
+            }}
+          >
+            <button type="button">Booking now</button>
+          </div>
           <div className="images">
             {dragon.flickr_images.map((pic) => (<img key={pic} alt="" src={pic} />))}
           </div>
