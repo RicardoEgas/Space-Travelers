@@ -47,7 +47,7 @@ RocketInfo.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.arrayOf(PropTypes.string).isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   reserved: PropTypes.bool,
 };
 
