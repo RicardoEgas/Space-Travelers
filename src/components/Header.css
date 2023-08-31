@@ -26,7 +26,7 @@ header h1 {
 }
 
 .navbar a {
-  padding: 10px 20px;
+  padding: 0 20px;
   color: #02bab7;
   text-decoration: none;
 }
@@ -41,9 +41,14 @@ header h1 {
   border-bottom: 2px solid #02bab7;
 }
 
+.profile-link {
+  border-left: 1px solid #333;
+}
+
 @media (max-width: 960px) {
   header {
     flex-direction: column;
+    padding: 20px 0;
   }
 
   header h1 {
@@ -59,6 +64,12 @@ header h1 {
   }
 
   .navbar a {
-    padding: 10px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .profile-link {
+    padding-top: 2px;
+    border-left: 1px solid #333;
   }
 }

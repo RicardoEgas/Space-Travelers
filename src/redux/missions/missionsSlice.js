@@ -45,6 +45,7 @@ const missionSlice = createSlice({
         mission_id: mission.mission_id,
         mission_name: mission.mission_name,
         description: mission.description,
+        reserved: false,
       }));
       state.missions = missionsData;
     });

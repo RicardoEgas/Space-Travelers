@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissionData, markMissionAsReserved, leaveMission } from '../redux/missions/missionsSlice';
+import { markMissionAsReserved, leaveMission } from '../redux/missions/missionsSlice';
 import './missions.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.mission.missions);
-
-  useEffect(() => {
-    dispatch(fetchMissionData());
-  }, [dispatch]);
 
   const handleMissionAction = (missionId) => {
     const mission = missions.find((mission) => mission.mission_id === missionId);

@@ -9,6 +9,7 @@ import Dragons from './components/dragons';
 import Rockets from './components/Rockets';
 import { fetchDragonsAsync } from './redux/dragons/dragonsSlice';
 import { fetchRockets } from './redux/rockets/rocketsSlice';
+import { fetchMissionData } from './redux/missions/missionsSlice';
 
 const Home = () => (
   <>
@@ -23,6 +24,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchRockets());
     dispatch(fetchDragonsAsync());
+    dispatch(fetchMissionData());
   });
 
   return (
