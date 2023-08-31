@@ -37,7 +37,7 @@ header h1 {
 
 .navbar a:hover,
 .navbar .active {
-  color:#9ad0cf;
+  color: #9ad0cf;
   border-bottom: 2px solid #02bab7;
 }
 
