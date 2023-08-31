@@ -4,11 +4,12 @@ import './profile.css';
 const MyProfile = () => {
   const missions = useSelector((state) => state.mission.missions);
   const reservedMissions = missions.filter((mission) => mission.reserved === true);
+
   const { rockets } = useSelector((state) => state.rockets);
   const reserveRocket = rockets.filter((rocket) => rocket.reserved);
 
-  const dragons  = useSelector((state) => state.dragon.dragons);
-  const dragonReserved = dragons.filder((dragon) => dragon.reserved);
+  const { dragons } = useSelector((state) => state.dragons);
+  const dragonReserved = dragons.filter((dragon) => dragon.reserved);
   return (
     <div className="profile-page">
       <div className="profile-section">
