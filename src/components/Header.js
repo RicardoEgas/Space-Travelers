@@ -7,7 +7,6 @@ function Header() {
       <h1>Space Travelers&apos; Hub</h1>
       <nav className="navbar">
         <ul>
-
           <li>
             <NavLink
               to="/"
@@ -35,7 +34,7 @@ function Header() {
           <li>
             <NavLink
               to="profile"
-              className="link"
+              className="link profile-link"
             >
               My profile
             </NavLink>
