@@ -110,11 +110,11 @@ Deployment instructions to follow
 - Twitter: [@balatstar](https://twitter.com/balatstar)
 - LinkedIn: [Joyce Cruz](https://linkedin.com/in/joyce-ann-cruz-668a41a7)
 
-👤 **Nelson Menendez**
+👤 **Menendez NELSON**
 
 - GitHub: [@MenendezON](https://github.com/MenendezON)
-- Twitter: [@username](https://twitter.com/)
-- LinkedIn: [username](https://linkedin.com/in/)
+- Twitter: [@username](https://twitter.com/menendezon)
+- LinkedIn: [username](https://linkedin.com/in/menendezon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
