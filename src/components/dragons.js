@@ -18,6 +18,11 @@ const Dragons = () => {
     }
   };
 
+  const handleRandom = (number) => {
+    const randomNumber = Math.floor(Math.random() * number);
+    return randomNumber;
+  };
+
   return (
     <section className="dragon">
       {dragons.map((dragon) => (
@@ -29,7 +34,7 @@ const Dragons = () => {
           <div
             className="mainImg"
             style={{
-              height: '300px', backgroundImage: `url(${dragon.flickr_images[1]})`, backgroundSize: 'cover',
+              height: '300px', backgroundImage: `url(${dragon.flickr_images[handleRandom(dragon.flickr_images.length)]})`, backgroundSize: 'cover',
             }}
           >
             <button type="button" onClick={() => handleDragon(dragon.id)} className={dragon.reserved ? 'reserved' : 'button'}>
