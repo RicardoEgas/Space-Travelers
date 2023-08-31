@@ -23,7 +23,6 @@ const dragonsSlice = createSlice({
   reducers: {
     dragonReserved: (state, action) => {
       const { id } = action.payload;
-
       state.dragons = state.dragons.map((dragon) => {
         if (dragon.id === id) {
           return { ...dragon, reserved: true };
@@ -33,7 +32,6 @@ const dragonsSlice = createSlice({
     },
     dragonCanceled: (state, action) => {
       const { id } = action.payload;
-
       state.dragons = state.dragons.map((dragon) => {
         if (dragon.id === id) {
           return { ...dragon, reserved: false };

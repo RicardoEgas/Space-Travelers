@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDragonsAsync, dragonReserved, dragonCanceled } from '../redux/dragons/dragonsSlice';
+import { dragonReserved, dragonCanceled } from '../redux/dragons/dragonsSlice';
 import './Dragons.css';
 
 const Dragons = () => {
   const dispatch = useDispatch();
   const dragons = useSelector((state) => state.dragons.dragons);
 
-  useEffect(() => {
-    dispatch(fetchDragonsAsync());
-  }, [dispatch]);
-
   const handleDragon = (id) => {
     const dragon = dragons.find((dragon) => dragon.id === id);
-
     if (dragon) {
       if (dragon.reserved) {
         dispatch(dragonCanceled({ id }));
