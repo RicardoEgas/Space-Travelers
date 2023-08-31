@@ -7,6 +7,7 @@ import MyProfile from './components/profile';
 import Missions from './components/missions';
 import Dragons from './components/dragons';
 import Rockets from './components/Rockets';
+import { fetchDragonsAsync } from './redux/dragons/dragonsSlice';
 import { fetchRockets } from './redux/rockets/rocketsSlice';
 
 const Home = () => (
@@ -21,6 +22,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchRockets());
+    dispatch(fetchDragonsAsync());
   });
 
   return (

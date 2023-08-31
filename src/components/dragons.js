@@ -1,15 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDragonsAsync } from '../redux/dragons/dragonsSlice';
+import { dragonReserved, dragonCanceled } from '../redux/dragons/dragonsSlice';
 import './Dragons.css';
 
 const Dragons = () => {
   const dispatch = useDispatch();
   const dragons = useSelector((state) => state.dragons.dragons);
 
-  useEffect(() => {
-    dispatch(fetchDragonsAsync());
-  });
+  const handleDragon = (id) => {
+    const dragon = dragons.find((dragon) => dragon.id === id);
+    if (dragon) {
+      if (dragon.reserved) {
+        dispatch(dragonCanceled({ id }));
+      } else {
+        dispatch(dragonReserved({ id, reserved: true }));
+      }
+    }
+  };
+
+  const handleRandom = (number) => {
+    const randomNumber = Math.floor(Math.random() * number);
+    return randomNumber;
+  };
 
   return (
     <section className="dragon">
@@ -22,10 +34,12 @@ const Dragons = () => {
           <div
             className="mainImg"
             style={{
-              height: '300px', backgroundImage: `url(${dragon.flickr_images[1]})`, backgroundSize: 'cover',
+              height: '300px', backgroundImage: `url(${dragon.flickr_images[handleRandom(dragon.flickr_images.length)]})`, backgroundSize: 'cover',
             }}
           >
-            <button type="button">Reserve dragon</button>
+            <button type="button" onClick={() => handleDragon(dragon.id)} className={dragon.reserved ? 'reserved' : 'button'}>
+              {dragon.reserved ? 'Cancel the reserve' : 'Reserve dragon'}
+            </button>
           </div>
           <div className="images">
             {dragon.flickr_images.map((pic) => (<img key={pic} alt="" src={pic} />))}

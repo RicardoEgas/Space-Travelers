@@ -21,16 +21,26 @@
   margin: 5px 0;
 }
 
-.mainImg button {
+.button,
+.reserved {
   height: 25px;
   border: 0;
-  background-color: #f66f1c;
+  background-color: gray;
   font-weight: bold;
   cursor: pointer;
   color: white;
 }
 
-.mainImg button:hover {
+.button {
+  background-color: #f66f1c;
+}
+
+.reserved {
+  background-color: gray;
+}
+
+.button:hover,
+.reserved:hover {
   color: silver;
 }
 
