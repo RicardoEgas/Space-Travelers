@@ -37,7 +37,8 @@ header h1 {
 
 .navbar a:hover,
 .navbar .active {
-  text-decoration: underline;
+  color:#9ad0cf;
+  border-bottom: 2px solid #02bab7;
 }
 
 @media (max-width: 960px) {
