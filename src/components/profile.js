@@ -7,6 +7,8 @@ const MyProfile = () => {
   const { rockets } = useSelector((state) => state.rockets);
   const reserveRocket = rockets.filter((rocket) => rocket.reserved);
 
+  const dragons  = useSelector((state) => state.dragon.dragons);
+  const dragonReserved = dragons.filder((dragon) => dragon.reserved);
   return (
     <div className="profile-page">
       <div className="profile-section">
@@ -32,9 +34,9 @@ const MyProfile = () => {
       <div className="profile-section">
         <h2 className="profile-head">My Dragons</h2>
         <ul className="profile-content">
-          {reserveRocket.map((rocket) => (
-            <li className="profile-item" key={rocket.id}>
-              {rocket.name}
+          {dragonReserved.map((dragon) => (
+            <li className="profile-item" key={dragon.id}>
+              {dragon.name}
             </li>
           ))}
         </ul>
