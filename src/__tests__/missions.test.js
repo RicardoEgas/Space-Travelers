@@ -28,7 +28,7 @@ test('Missions component renders correctly', () => {
     },
     // Add more mission objects as needed
   ]);
-  
+
   const { container } = render(<Missions />);
 
   expect(container).toMatchSnapshot();
