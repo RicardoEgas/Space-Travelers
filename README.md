@@ -100,9 +100,9 @@ Deployment instructions to follow
 
 👤 **Ricardo Egas**
 
-- GitHub: [@RicardoEgas](https://github.com/RicardoEgas)
-- Twitter: [@username](https://twitter.com/)
-- LinkedIn: [username](https://linkedin.com/in/)
+- GitHub: [@githubhandle](https://github.com/RicardoEgas)
+- Twitter: [@twitterhandle](https://twitter.com/RjEgas)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ricardo-egas-952125136)
 
 👤 **Joyce Cruz**
 
@@ -121,7 +121,8 @@ Deployment instructions to follow
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Better styling
+- [ ] **[Styling]**
+- [ ] **[Improved UI]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
