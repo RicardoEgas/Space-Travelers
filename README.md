@@ -18,6 +18,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+  - [Live Demo](#live-demo)
   - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -87,6 +88,10 @@ npm start
 To run tests, run the following command:
 
 npm test
+
+### Live Demo
+
+[Demo](https://65b7dbbe47764022e0ee437b--chimerical-dodol-b4247a.netlify.app/)
 
 ### Deployment
 
